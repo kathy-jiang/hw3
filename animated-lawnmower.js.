@@ -1,0 +1,46 @@
+function setup() {
+  createCanvas(400, 200);
+  colorMode(HSB);
+}
+
+var x = 0;
+var h = 10;
+var c = 30
+var cSpeed=3
+
+function draw() {
+  stroke(random(60, 70), 100, 90);
+  line(x, height-10, x+random(-10, 10), height-10-random(h));
+  noStroke();
+  
+  fill(40, 100, 60);
+  rect(0, height-10, width, 10);
+  
+  x = x + 10;
+
+  if (x > width) {
+    x = random(10);
+    h = h + 0.1;
+  }
+  
+  
+  
+  c = c+cSpeed
+  
+     fill(255)
+  rect(c,0,10,height-15)
+  
+  if(c>=400){
+ 
+    cSpeed=-3
+  }
+  
+  if(c<=0){
+    cSpeed=3
+  }
+    
+  
+  
+
+
+}
